@@ -2,6 +2,14 @@ import { HiChevronDoubleDown } from "react-icons/hi";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import BaseImage from '../assets/baseImage.webp'
+import OnlineClasses from '../assets/OnlineClasses.jfif'
+import Essay from '../assets/Essay.jfif'
+import Math from '../assets/Math.jfif'
+import programming from '../assets/programming.jfif'
+import med from '../assets/med.jfif'
+import history from '../assets/history.jfif'
+import chem from '../assets/chem.jfif'
+import bio from '../assets/bio.jfif'
 
 
 const responsive = {
@@ -27,42 +35,42 @@ const responsive = {
 const servicesMemory = [
     {
         id:1,
-        image:BaseImage,
+        image:OnlineClasses,
         decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
     },
     {
         id:2,
-        image:BaseImage,
+        image:Essay,
         decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
     },
     {
         id:3,
-        image:BaseImage,
+        image:Math,
         decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
     },
     {
         id:4,
-        image:BaseImage,
+        image:med,
         decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
     },
     {
         id:5,
-        image:BaseImage,
+        image:programming,
         decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
     },
     {
         id:6,
-        image:BaseImage,
+        image:history,
         decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
     },
     {
         id:8,
-        image:BaseImage,
+        image:chem,
         decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
     },
     {
         id:9,
-        image:BaseImage,
+        image:bio,
         decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
     },
 
@@ -83,10 +91,10 @@ const Services = ()=>{
         <Carousel responsive={responsive}>
            {servicesMemory.map(service=>(
             <div className="w-auto m-3 bg-gray-100 ">
-                <img src={service.image} alt="service image" className="w-full h-auto"/>
+                <img src={service.image}  alt="service image" className="w-full h-48"/>
                 <div className="p-3">
                     <p>{service.decription}</p>
-                    <button className="transiton transition-all border border-black p-2 mt-4  hover:bg-black hover:text-slate-50">Get Service</button>
+                    <button className="transiton transition-all border border-black p-2 mt-4  hover:bg-black hover:text-slate-50">Get More Info</button>
                 </div>
                 
             </div>

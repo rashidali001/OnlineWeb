@@ -97,7 +97,7 @@ const AllServices  = () => {
 
   return (
     <>
-    <nav className="flex justify-between items-center py-2 px-4 bg-black text-slate-50 ">
+    <nav className="flex justify-between items-center py-4 px-4 bg-black text-slate-50 ">
                 <Link to="/">
                 <div>STUDYPALWRITERS</div>
                 </Link>            
@@ -110,7 +110,7 @@ const AllServices  = () => {
     </header>
 
 
-    <div id="services" className="py-12 bg-gray-50">
+    <div className="py-12 bg-gray-50">
 
 
       {/* Desktop Layout */}
@@ -169,9 +169,11 @@ const AllServices  = () => {
       </ul>
 
       {/* Schedule Button */}
+      <a href="https://wa.me/971525532808">
       <button className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition">
         Schedule a Free Call
       </button>
+      </a>
     </div>
     </>
   );

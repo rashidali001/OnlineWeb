@@ -23,10 +23,13 @@ const Consultation = ()=>{
       </ul>
 
       {/* Schedule Button */}
+      <a href="https://wa.me/971525532808">
       <button className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition">
         Schedule a Free Call
       </button>
+      </a>
     </div>
+    
 
     );
 }

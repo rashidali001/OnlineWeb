@@ -31,8 +31,7 @@ const Socials = ()=>{
         <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
          <FaPhoneAlt/>
         </a>
-
-        <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
+        <a href="https://wa.me/971525532808" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
          <BsWhatsapp/>
         </a>
        

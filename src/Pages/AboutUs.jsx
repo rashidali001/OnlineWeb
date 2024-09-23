@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CompanyProfile from '../assets/CompanyProfile.avif'
 
 const AboutUs = ()=>{
@@ -21,9 +22,13 @@ const AboutUs = ()=>{
             <li>Comprehensive academic support services</li>
             <li>Personalized approach tailored to each student's needs</li>
           </ul>
+          
+          <Link to="/services">
           <button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg shadow-lg hover:bg-blue-600 transition">
             Learn More About Us
           </button>
+          </Link>
+          
         </div>
       </div>
 

@@ -31,9 +31,11 @@ const Herosection = () => {
           <p className="mt-4 text-sm italic md:text-md text-gray-600">
            Let us handle the heavy lifting while you focus on what matters. Ready to simplify your college experience?
           </p> 
+          <a href="https://wa.me/971525532808">
           <button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg shadow-lg hover:bg-blue-600 transition">
             Get Started Today
           </button>
+          </a>
         </div>
       </div>
     </div>

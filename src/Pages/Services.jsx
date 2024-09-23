@@ -1,4 +1,5 @@
 import { HiChevronDoubleDown } from "react-icons/hi";
+import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import BaseImage from '../assets/baseImage.webp'
@@ -36,42 +37,42 @@ const servicesMemory = [
     {
         id:1,
         image:OnlineClasses,
-        decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
+        decription:"Online classes"
     },
     {
         id:2,
         image:Essay,
-        decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
+        decription:"Essays"
     },
     {
         id:3,
         image:Math,
-        decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
+        decription:"Mathematics"
     },
     {
         id:4,
         image:med,
-        decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
+        decription:"Medicine & Nursing"
     },
     {
         id:5,
         image:programming,
-        decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
+        decription:"Programming & IT"
     },
     {
         id:6,
         image:history,
-        decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
+        decription:"History"
     },
     {
         id:8,
         image:chem,
-        decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
+        decription:"Chemistry"
     },
     {
         id:9,
         image:bio,
-        decription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium"
+        decription:"Biology"
     },
 
 ]
@@ -87,14 +88,16 @@ const Services = ()=>{
                 <HiChevronDoubleDown/>            
             </header>
         </div>
-        <div className="p-4 md:p-8 ">
+        <div id="services" className="p-4 md:p-8 ">
         <Carousel responsive={responsive}>
            {servicesMemory.map(service=>(
             <div className="w-auto m-3 bg-gray-100 ">
                 <img src={service.image}  alt="service image" className="w-full h-48"/>
                 <div className="p-3">
-                    <p>{service.decription}</p>
+                    <p className="text-2xl font-bold">{service.decription}</p>
+                    <Link to="/services">
                     <button className="transiton transition-all border border-black p-2 mt-4  hover:bg-black hover:text-slate-50">Get More Info</button>
+                    </Link>                    
                 </div>
                 
             </div>

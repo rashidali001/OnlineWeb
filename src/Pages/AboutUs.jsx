@@ -25,7 +25,7 @@ const AboutUs = ()=>{
           
           <Link to="/services">
           <button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg shadow-lg hover:bg-blue-600 transition">
-            Learn More About Us
+            Learn More About Our Services
           </button>
           </Link>
           

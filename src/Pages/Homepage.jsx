@@ -17,7 +17,7 @@ const Homepage = ()=>{
                 <div>STUDYPALWRITERS</div>
                 
                 <a href="#services">
-                <div className="border border-red-400 p-3">
+                <div className="border border-red-400 p-3 transition hover:bg-red-400">
                     Services
                 </div>
                 </a>

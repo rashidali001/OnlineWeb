@@ -7,12 +7,12 @@ const Consultation = ()=>{
     <div className="flex flex-col items-center justify-center  bg-blue-50 py-16 px-8">
       {/* Title */}
       <h2 className="text-4xl font-bold text-gray-800 mb-4 text-center">
-        Got Questions? We’re Here to Help!
+      Not sure where to start? Contact us!
       </h2>
       
       {/* Description */}
       <p className="text-lg text-gray-600 text-center max-w-xl mb-6">
-        Not sure where to start or have more questions? Book a <span className="font-semibold">free consultation call</span> with our experts, and we’ll walk you through exactly how we can support your academic journey.
+        We’ll walk you through exactly how we can support your academic journey.
       </p>
       
       {/* Call-to-action */}
@@ -25,7 +25,7 @@ const Consultation = ()=>{
       {/* Schedule Button */}
       <a href="https://wa.me/971525532808">
       <button className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition">
-        Schedule a Free Call
+        Contact us
       </button>
       </a>
     </div>

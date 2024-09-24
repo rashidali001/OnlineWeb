@@ -19,10 +19,11 @@ const Socials = ()=>{
 
       {/* Social Media Icons */}
       <div className="flex space-x-6 mt-4">
-        {/* Replace with actual links */}
+        {/* Replace with actual links 
         <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
          <SlSocialInstagram/>
         </a>
+        */}
 
         <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
          <CgMail/>

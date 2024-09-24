@@ -2,15 +2,13 @@ import { HiChevronDoubleDown } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import BaseImage from '../assets/baseImage.webp'
 import OnlineClasses from '../assets/OnlineClasses.jfif'
 import Essay from '../assets/Essay.jfif'
 import Math from '../assets/Math.jfif'
 import programming from '../assets/programming.jfif'
 import med from '../assets/med.jfif'
-import history from '../assets/history.jfif'
 import chem from '../assets/chem.jfif'
-import bio from '../assets/bio.jfif'
+
 
 
 const responsive = {
@@ -37,44 +35,39 @@ const servicesMemory = [
     {
         id:1,
         image:OnlineClasses,
-        decription:"Online classes"
+        decription:"Online classes",
+        description2:"Pearson, Aleks, Edgenuity, Edmentum, Canvas etc"
     },
     {
         id:2,
         image:Essay,
-        decription:"Essays"
+        decription:"Essays & Research",
+        description2:"English, Political Science, History, Sciences, Any subject etc"
     },
     {
         id:3,
         image:Math,
-        decription:"Mathematics"
+        decription:"Mathematics",
+        description2:"Statistics, Algebra, Probability, Calculus, SPSS etc"
     },
     {
         id:4,
         image:med,
-        decription:"Medicine & Nursing"
+        decription:"Medicine & Nursing",
+        description2:"Anatomy, Pathology, Case studies etc"
     },
     {
         id:5,
         image:programming,
-        decription:"Programming & IT"
-    },
-    {
-        id:6,
-        image:history,
-        decription:"History"
+        decription:"Programming & IT",
+        description2:"AI, Computer Networks, Mathlab, All programming languages & libraries etc"
     },
     {
         id:8,
         image:chem,
-        decription:"Chemistry"
-    },
-    {
-        id:9,
-        image:bio,
-        decription:"Biology"
-    },
-
+        decription:"Lab reports",
+        description2:"Chemistry, Biology, Physics etc"
+    }
 ]
 
 const Services = ()=>{
@@ -95,9 +88,10 @@ const Services = ()=>{
                 <img src={service.image}  alt="service image" className="w-full h-48"/>
                 <div className="p-3">
                     <p className="text-2xl font-bold">{service.decription}</p>
-                    <Link to="/services">
-                    <button className="transiton transition-all border border-black p-2 mt-4  hover:bg-black hover:text-slate-50">Get More Info</button>
-                    </Link>                    
+                    <p className="text-md italic w-auto h-16 mt-2">{service.description2}</p>
+                    <a href="https://wa.me/971525532808">
+                    <button className="transiton transition-all border border-black p-2 mt-4  hover:bg-black hover:text-slate-50">Contact Us</button>
+                    </a>                   
                 </div>
                 
             </div>

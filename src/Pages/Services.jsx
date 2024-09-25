@@ -89,7 +89,7 @@ const Services = ()=>{
                 <div className="p-3">
                     <p className="text-2xl font-bold">{service.decription}</p>
                     <p className="text-md italic w-auto h-16 mt-2">{service.description2}</p>
-                    <a href="https://wa.me/971525532808">
+                    <a href="https://wa.me/14424074486">
                     <button className="transiton transition-all border border-black p-2 mt-4  hover:bg-black hover:text-slate-50">Contact Us</button>
                     </a>                   
                 </div>

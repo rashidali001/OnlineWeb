@@ -20,23 +20,25 @@ const Socials = ()=>{
       {/* Social Media Icons */}
       <div className="flex space-x-6 mt-4">
         {/* Replace with actual links */}
-        <a href="https://www.instagram.com/studyhelp_writers?igsh=MWozaWxvMG5rZzJtYQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
+        <a href="https://www.instagram.com/studyhelp_writers?igsh=MWozaWxvMG5rZzJtYQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-red-500 text-2xl">
          <SlSocialInstagram/>
         </a>
 
-        {/*
+        
         
 
-        <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
+        <a href="sms:+254793599129&body=Hello" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
          <CgMail/>
         </a>
+
+        {/*
 
         <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
          <FaPhoneAlt/>
         </a>
         */}
         
-        <a href="https://wa.me/14424074486" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
+        <a href="https://wa.me/14424074486" target="_blank" rel="noopener noreferrer" className="text-green-500 text-2xl">
          <BsWhatsapp/>
         </a>
        

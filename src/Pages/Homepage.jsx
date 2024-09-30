@@ -73,7 +73,7 @@ const Homepage = ()=>{
                             Contact Us
                         </h2>
 
-                        <div className="flex flex-col md:flex-row gap-5">
+                        <div className="flex flex-col justify-center items-center md:flex-row gap-5">
                             <a href="sms:+14424074486&body=Hello">
                             <button className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition">
                                 iMessage

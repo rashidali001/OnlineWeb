@@ -83,7 +83,7 @@ const Reviews = ()=>{
         <>
         <div className="p-4 md:p-6">
             <header className="flex flex-col items-center justify-center gap-3">
-                <h1 className="text-lg md:text-4xl">Trusted by Students Nationwide</h1>
+                <h1 className="text-2xlg md:text-4xl">What students are saying about Studypal</h1>
                 <HiChevronDoubleDown/>           
             </header>
         </div>

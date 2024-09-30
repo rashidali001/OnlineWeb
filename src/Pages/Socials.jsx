@@ -27,7 +27,7 @@ const Socials = ()=>{
         
         
 
-        <a href="sms:+254793599129&body=Hello" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
+        <a href="sms:+254793599129&body=Hello" target="_blank" rel="noopener noreferrer" className="text-blue-600 text-2xl">
          <CgMail/>
         </a>
 

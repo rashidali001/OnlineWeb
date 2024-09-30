@@ -1,6 +1,10 @@
 
 
-const Consultation = ()=>{
+const Consultation = ({setModal})=>{
+
+  const changeModal = ()=>{
+    setModal(true);
+}
 
     return (
 
@@ -23,11 +27,11 @@ const Consultation = ()=>{
       </ul>
 
       {/* Schedule Button */}
-      <a href="https://wa.me/14424074486">
-      <button className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition">
+      
+      <button className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition" onClick={changeModal}>
         Contact us
       </button>
-      </a>
+      
     </div>
     
 

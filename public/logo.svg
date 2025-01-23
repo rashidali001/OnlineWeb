@@ -1,0 +1,14 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="100" fill="#2C3E50"/>
+  <!-- Book Base -->
+  <path d="M128 176C128 154.461 145.461 137 167 137H345C366.539 137 384 154.461 384 176V336C384 357.539 366.539 375 345 375H167C145.461 375 128 357.539 128 336V176Z" fill="#3498DB"/>
+  <!-- Pages -->
+  <path d="M160 168C160 157.507 168.507 149 179 149H333C343.493 149 352 157.507 352 168V344C352 354.493 343.493 363 333 363H179C168.507 363 160 354.493 160 344V168Z" fill="#ECF0F1"/>
+  <!-- Writing Lines -->
+  <path d="M192 208H320" stroke="#2C3E50" stroke-width="12" stroke-linecap="round"/>
+  <path d="M192 256H320" stroke="#2C3E50" stroke-width="12" stroke-linecap="round"/>
+  <path d="M192 304H320" stroke="#2C3E50" stroke-width="12" stroke-linecap="round"/>
+  <!-- Pen -->
+  <path d="M352 137L384 169L288 265L256 233L352 137Z" fill="#E74C3C"/>
+  <path d="M256 233L288 265L272 281L240 249L256 233Z" fill="#C0392B"/>
+</svg> 

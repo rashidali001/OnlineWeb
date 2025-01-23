@@ -1,223 +1,175 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { HiChevronDoubleDown } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 
-const AllServices  = () => {
-  const [modal, setModal] = useState(false);
-
-  const changeModal = ()=>{
-      setModal(false);
-  }
-
+const AllServices = ({ setModal }) => {
   const services = [
     {
-      title: 'Online Classes',
-      description:
-        'We offer support to ensure you stay on top of your coursework across popular online platforms:',
-      details: [
-        'Edgenuity Classes: Assistance with video lessons, quizzes, and assignments to help you meet learning goals.',
-        'Canvas Classes: We manage your discussion boards, assignments, quizzes, and even projects.',
-        'Pearson Classes: Guidance through Pearson’s digital platforms, handling online assignments, and completing assessments.',
-        'Aleks: Math and science modules on Aleks can be tricky—we help you complete learning objectives and tests efficiently.',
-        'Edmentum: Full support with assignments, projects, and quizzes to ensure your success in this learning platform.',
-      ],
+      title: "Essay Writing",
+      description: "Professional essays, research papers, and academic writing with thorough research and original content.",
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+        </svg>
+      )
     },
     {
-      title: 'Essays',
-      description:
-        'We provide customized essay writing services across a wide range of disciplines, tailored to your specific guidelines:',
-      details: [
-        'English Literature: In-depth analysis of literary texts, essays on themes, characters, and critical reviews.',
-        'Political Science: Essays on government structures, political theory, and current events analysis.',
-        'Sciences: Well-researched papers on biology, chemistry, physics, and more, formatted according to academic standards.',
-        'Projects: We help create well-organized academic projects, integrating research, data analysis, and presentations.',
-        'PowerPoint Presentations: Professionally designed and content-driven presentations for any subject area.',
-      ],
+      title: "Online Classes",
+      description: "Complete management of online courses, including assignments, discussions, and exam preparation.",
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      )
     },
     {
-      title: 'Mathematics',
-      description:
-        'Mathematics can be challenging, but we cover a broad range of topics to support your learning at every level:',
-      details: [
-        'Statistics: Analysis, data interpretation, probability distributions, and hypothesis testing.',
-        'Algebra: Solving equations, understanding functions, and everything in between.',
-        'Probability: Probability theory, permutations, combinations, and applied problem-solving.',
-        'Calculus: Differentiation, integration, limits, and application to real-world problems.',
-        'SPSS: Help with statistical analysis, interpreting outputs, and preparing reports using SPSS software.',
-      ],
+      title: "Programming Help",
+      description: "Expert assistance with programming assignments, debugging, and project development.",
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        </svg>
+      )
     },
     {
-      title: 'Computer Programming',
-      description:
-        'Our programming experts can help you with coding assignments, debugging, and project development in multiple languages:',
-      details: [
-        'JavaScript: Client-side and server-side programming, web development, and frameworks like React.',
-        'C+: Object-oriented programming, control structures, and basic algorithms.',
-        'Python: Coding for data analysis, machine learning, web scraping, and software development.',
-        'C++: Complex programming concepts, algorithms, and data structures.',
-        'MATLAB: Matrix manipulations, plotting functions, and implementing algorithms for complex math and engineering tasks.',
-      ],
-    },
-    {
-      title: 'Biology',
-      description:
-        'From molecular biology to ecosystems, we help students with assignments, research papers, and lab reports:',
-      details: [
-        'Cell structure, genetics, evolution, and biotechnology.',
-        'Human anatomy, physiology, and ecological studies.',
-        'Assistance with lab work, practicals, and written reports.',
-      ],
-    },
-    {
-      title: 'Chemistry',
-      description:
-        'Our chemistry support covers all subfields, including organic, inorganic, physical, and analytical chemistry. We assist with:',
-      details: [
-        'Chemical equations, stoichiometry, reactions, and properties of substances.',
-        'Laboratory reports, problem sets, and theoretical assignments.',
-      ],
-    },
-    {
-      title: 'Lab Reports',
-      description:
-        'Writing detailed, accurate, and well-structured lab reports is critical for science students. We provide:',
-      details: [
-        'Guidance on structuring reports (introduction, methods, results, discussion).',
-        'Help interpreting experimental data and drawing meaningful conclusions.',
-      ],
-    },
-    {
-      title: 'Nursing and Medicine',
-      description:
-        'Our experienced team provides comprehensive support for nursing and medical students, ensuring clarity and thorough research:',
-      details: [
-        'Case Studies: Detailed analysis of patient scenarios with evidence-based treatment recommendations.',
-        'Research Papers: Well-researched, properly cited papers on various medical topics, including new findings and clinical practices.',
-        'Care Plans: Development of individualized patient care plans based on clinical assessments and diagnoses.',
-        'Presentations: Professional presentations on nursing topics, case studies, and research findings.',
-        'Clinical Reflection Journals: Help reflecting on clinical experiences, documenting skills learned and areas for improvement.',
-        'Pathophysiology Assignments: Assistance with understanding disease processes, mechanisms, and treatments, along with case analysis.',
-      ],
-    },
+      title: "Lab Reports",
+      description: "Detailed lab reports with proper formatting, analysis, and scientific documentation.",
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
+      )
+    }
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-50">
+      {/* Navigation */}
+      <nav className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <Link to="/" className="flex items-center space-x-3">
+              <img src="/logo.svg" alt="StudyPal Writers" className="h-8 w-8" />
+              <span className="font-extrabold text-xl tracking-tight text-gray-900">
+                STUDYPAL<span className="text-blue-600">WRITERS</span>
+              </span>
+            </Link>
+          </div>
+        </div>
+      </nav>
 
-{modal?
-            <>
-                {/* Modal Overlay */}
-                <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center">
-                    {/* Modal Content */}
-                    <div className="p-5 rounded-lg bg-slate-50 relative z-50">
-                        {/* Close button */}
-                        <button className="absolute top-2 right-6 text-gray-400 hover:text-gray-950 font-semibold transition" onClick={changeModal}>
-                            X
-                        </button>
+      {/* Hero Section */}
+      <div className="bg-white border-b">
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl md:text-5xl">
+              Our Academic Services
+            </h1>
+            <p className="mt-4 text-base text-gray-600 sm:text-lg md:text-xl max-w-3xl mx-auto">
+              Discover our comprehensive range of academic support services
+            </p>
+            <div className="mt-6 animate-bounce">
+              <HiChevronDoubleDown className="w-6 h-6 mx-auto text-blue-600" />
+            </div>
+          </div>
+        </div>
+      </div>
 
-                        <h2 className="text-4xl font-bold text-gray-800 mb-8 mt-4 text-center">
-                            Contact Us
-                        </h2>
-
-                        <div className="flex flex-col justify-center items-center md:flex-row gap-5">
-                            <a href="sms:+14424074486&body=Hello">
-                            <button className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition">
-                                iMessage
-                            </button>
-                            </a>
-                            <a href="https://wa.me/14424074486">
-                            <button className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition">
-                                Whatsapp
-                            </button>
-                            </a>
-                        </div>
-                    </div>
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {services.map((service, index) => (
+            <div 
+              key={index}
+              className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-8 transform hover:-translate-y-1"
+            >
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="p-3 bg-blue-50 rounded-xl text-blue-600">
+                    {service.icon}
+                  </div>
                 </div>
-            </>
-            :
-            <>
-            </>
-            }
-    <nav className="flex justify-between items-center py-4 px-4 bg-black text-slate-50 ">
-                <Link to="/">
-                <div>STUDYPALWRITERS</div>
-                </Link>            
-    </nav>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <button
+                    onClick={() => setModal(true)}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group"
+                  >
+                    Get Started
+                    <svg 
+                      className="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
 
-    <header className="flex flex-col items-center justify-center gap-3 mt-10 mb-10">
-                <h1 className="text-lg text-center md:text-4xl">Get more Information on the great services we have to offer</h1>
-                <p className="my-2 text-red-700 italic">*scroll down to your preferred service</p>
-                <HiChevronDoubleDown/>            
-    </header>
-
-
-    <div className="py-12 bg-gray-50">
-
-
-      {/* Desktop Layout */}
-      <div className="hidden md:grid grid-cols-2 gap-8 px-6 lg:px-32">
-        {services.map((service, index) => (
-          <div key={index} className="p-6 bg-white shadow-md rounded-lg">
-            <h3 className="text-2xl font-semibold text-indigo-600 mb-4">
-              {service.title}
-            </h3>
-            <p className="mb-4 font-semibold text-gray-700">{service.description}</p>
-            <ol className="list-decimal list-inside text-gray-700 space-y-2">
-              {service.details.map((detail, idx) => (
-                <li key={idx}>{detail}</li>
-              ))}
-            </ol>
-          </div>
-        ))}
+        {/* Call to Action */}
+        <div className="mt-16 text-center">
+          <button
+            onClick={() => setModal(true)}
+            className="inline-flex items-center px-8 py-4 text-lg font-semibold rounded-full text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-md"
+          >
+            Get Help With Your Assignment
+          </button>
+          <p className="mt-6 text-gray-600 flex items-center justify-center space-x-4">
+            <span>✓ 24/7 Support</span>
+            <span className="text-gray-300">|</span>
+            <span>✓ Quick Response</span>
+            <span className="text-gray-300">|</span>
+            <span>✓ Expert Writers</span>
+          </p>
+        </div>
       </div>
 
-      {/* Mobile Layout */}
-      <div className="md:hidden space-y-6 px-4">
-        {services.map((service, index) => (
-          <div key={index} className="p-4 bg-white shadow-md rounded-lg">
-            <h3 className="text-xl font-semibold text-indigo-600 mb-3">
-              {service.title}
-            </h3>
-            <p className="mb-4 text-gray-700">{service.description}</p>
-            <ol className="list-decimal list-inside text-gray-700 space-y-2">
-              {service.details.map((detail, idx) => (
-                <li key={idx}>{detail}</li>
-              ))}
-            </ol>
+      {/* Contact Modal */}
+      {modal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+          <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 relative shadow-xl transform transition-all">
+            <button 
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+              onClick={() => setModal(false)}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+              Contact Us
+            </h2>
+
+            <div className="flex flex-col space-y-4">
+              <a 
+                href="sms:+14424074486&body=Hello"
+                className="w-full px-6 py-4 bg-blue-600 text-white text-center font-semibold rounded-xl hover:bg-blue-700 transition-colors shadow-sm"
+              >
+                iMessage
+              </a>
+              <a 
+                href="https://wa.me/14424074486"
+                className="w-full px-6 py-4 bg-green-500 text-white text-center font-semibold rounded-xl hover:bg-green-600 transition-colors shadow-sm"
+              >
+                WhatsApp
+              </a>
+            </div>
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </div>
-
-
-
-    <div className="flex flex-col items-center justify-center  bg-blue-50 py-16 px-8">
-      {/* Title */}
-      <h2 className="text-4xl font-bold text-gray-800 mb-4 text-center">
-        Got More Questions? We’re Here to Help!
-      </h2>
-      
-      {/* Description */}
-      <p className="text-lg text-gray-600 text-center max-w-xl mb-6">
-       Book a <span className="font-semibold">free consultation call</span> with our experts, and we’ll walk you through exactly how we can support your academic journey.
-      </p>
-      
-      {/* Call-to-action */}
-      <ul className="text-gray-600 text-center mb-6">
-        <li className="mb-2">✅ Personalized advice based on your needs</li>
-        <li className="mb-2">✅ Clear explanations of our services</li>
-        <li className="mb-2">✅ No obligation—it’s free!</li>
-      </ul>
-
-      {/* Schedule Button */}
-      
-      <button className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition" onClick={()=>setModal(true)}>
-        Contact Us
-      </button>
-    
-    </div>
-    </>
   );
 };
 
-export default AllServices ;
+export default AllServices;

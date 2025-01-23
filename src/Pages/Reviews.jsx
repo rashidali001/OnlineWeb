@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { FaStar } from 'react-icons/fa';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import review1 from '../assets/review1.jfif'
@@ -76,43 +78,175 @@ const responsive = {
 
 ]
 
-const Reviews = ()=>{
+const Reviews = () => {
+    const reviews = [
+        {
+            id: 1,
+            title: "Lifesaver for My Assignments!",
+            content: "I was falling behind on my essays, and studypal helped me catch up in no time. They provided clear, well-researched papers that earned me great grades. I'll definitely use their service again!",
+            author: "Emily",
+            role: "Junior, Business Major",
+            rating: 5,
+            image: "/path/to/emily-image.jpg" // Make sure to update with actual image path
+        },
+        {
+            id: 2,
+            title: "Top-Notch Programming Help!",
+            content: "I struggled with coding assignments in my computer science classes, but studypal made everything so easy. Their experts walked me through each step, and I finally understood concepts that had been confusing me for weeks!",
+            author: "Jake",
+            role: "Sophomore, Computer Science",
+            rating: 5,
+            image: "/path/to/jake-image.jpg"
+        },
+        {
+            id: 3,
+            title: "Fast, Reliable, and Professional",
+            content: "The team at studypal was so professional and quick to respond. They completed my lab report on time and followed all of my instructions perfectly. Definitely a service you can trust.",
+            author: "Sophia",
+            role: "Senior, Biology Major",
+            rating: 5,
+            image: "/path/to/sophia-image.jpg"
+        },
+        {
+            id: 4,
+            title: "Online Class Support That Works",
+            content: "Managing my online classes was overwhelming, but studypal made it easy. They helped me stay on track with my assignments and quizzes, and I ended the semester with better grades than I expected!",
+            author: "Michael",
+            role: "Senior, Engineering",
+            rating: 5,
+            image: "/path/to/michael-image.jpg"
+        }
+    ];
+
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const nextReview = () => {
+        setActiveIndex((prev) => (prev + 1) % reviews.length);
+    };
+
+    const prevReview = () => {
+        setActiveIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
+    };
 
     return (
+        <section className="py-16 bg-gray-50" id="reviews">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Section Header */}
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+                        Student Success Stories
+                    </h2>
+                    <div className="w-20 h-1 bg-blue-600 rounded-full mx-auto"></div>
+                </div>
 
-        <>
-        <div className="p-4 md:p-6">
-            <header className="flex flex-col items-center justify-center gap-3">
-                <h1 className="text-2xlg md:text-4xl">What students are saying about Studypal</h1>
-                <HiChevronDoubleDown/>           
-            </header>
-        </div>
-        {/* Reviews */}
-        <div>
+                {/* Reviews Carousel */}
+                <div className="relative max-w-4xl mx-auto">
+                    {/* Navigation Buttons */}
+                    <button 
+                        onClick={prevReview}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 p-2 text-gray-400 hover:text-gray-600 transition-colors z-10"
+                        aria-label="Previous review"
+                    >
+                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
 
-        <Carousel responsive={responsive}>
-           {clientReviews.map(review=>(
-            <div className="flex flex-col justify-center items-center py-4 pt-6 gap-4 w-auto bg-gray-200 ">
-                <img src={review.image} alt="service image" className="w-20 h-20 rounded-full"/>
-                <div className="p-3">
-                    <p className="font-bold">"{review.title}"</p>                    
+                    <button 
+                        onClick={nextReview}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 p-2 text-gray-400 hover:text-gray-600 transition-colors z-10"
+                        aria-label="Next review"
+                    >
+                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+
+                    {/* Review Card */}
+                    <div className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300">
+                        <div className="md:flex">
+                            {/* Image Section */}
+                            <div className="md:w-1/3 relative">
+                                <img 
+                                    src={reviews[activeIndex].image}
+                                    alt={reviews[activeIndex].author}
+                                    className="w-full h-full object-cover object-center"
+                                    style={{ minHeight: '300px' }}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:hidden"></div>
+                            </div>
+
+                            {/* Content Section */}
+                            <div className="md:w-2/3 p-8 md:p-12">
+                                {/* Rating */}
+                                <div className="flex space-x-1 mb-4">
+                                    {[...Array(reviews[activeIndex].rating)].map((_, i) => (
+                                        <FaStar key={i} className="text-yellow-400 w-5 h-5" />
+                                    ))}
+                                </div>
+
+                                {/* Title */}
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                                    {reviews[activeIndex].title}
+                                </h3>
+
+                                {/* Review Content */}
+                                <p className="text-gray-600 text-lg mb-6 italic">
+                                    "{reviews[activeIndex].content}"
+                                </p>
+
+                                {/* Author Info */}
+                                <div className="flex items-center">
+                                    <div>
+                                        <p className="font-semibold text-gray-900">
+                                            {reviews[activeIndex].author}
+                                        </p>
+                                        <p className="text-gray-500">
+                                            {reviews[activeIndex].role}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Dots Navigation */}
+                    <div className="flex justify-center space-x-2 mt-8">
+                        {reviews.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setActiveIndex(index)}
+                                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                                    index === activeIndex ? 'bg-blue-600 w-8' : 'bg-gray-300'
+                                }`}
+                                aria-label={`Go to review ${index + 1}`}
+                            />
+                        ))}
+                    </div>
                 </div>
-                <div className="p-3 text-center">
-                    <p>"{review.review}"</p>                    
+
+                {/* Trust Indicators */}
+                <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div className="text-3xl font-bold text-blue-600 mb-2">100%</div>
+                        <div className="text-gray-600">Satisfaction Rate</div>
+                    </div>
+                    <div>
+                        <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+                        <div className="text-gray-600">Support Available</div>
+                    </div>
+                    <div>
+                        <div className="text-3xl font-bold text-blue-600 mb-2">1000+</div>
+                        <div className="text-gray-600">Happy Students</div>
+                    </div>
+                    <div>
+                        <div className="text-3xl font-bold text-blue-600 mb-2">4.9/5</div>
+                        <div className="text-gray-600">Average Rating</div>
+                    </div>
                 </div>
-                <div className="p-3">
-                    <p className="italic font-bold">"~ {review.name}"</p>                    
-                </div>
-                
             </div>
-           ))}
-        </Carousel>
-
-        </div>
-
-        </>
-
-    )
-}
+        </section>
+    );
+};
 
 export default Reviews;

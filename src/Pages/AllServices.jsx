@@ -151,13 +151,7 @@ const AllServices = ({ setModal }) => {
               Contact Us
             </h2>
 
-            <div className="flex flex-col space-y-4">
-              <a 
-                href="sms:+14424074486&body=Hello"
-                className="w-full px-6 py-4 bg-blue-600 text-white text-center font-semibold rounded-xl hover:bg-blue-700 transition-colors shadow-sm"
-              >
-                iMessage
-              </a>
+            <div className="flex justify-center">
               <a 
                 href="https://wa.me/14424074486"
                 className="w-full px-6 py-4 bg-green-500 text-white text-center font-semibold rounded-xl hover:bg-green-600 transition-colors shadow-sm"

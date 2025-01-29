@@ -36,7 +36,7 @@ const Homepage = () => {
                     <div className="flex items-center space-x-3">
                         <img src="/logo.svg" alt="StudyPal Writers" className="h-9 w-9" />
                         <span className="font-extrabold text-xl tracking-tight text-gray-800 hover:text-blue-600 transition-colors duration-300">
-                            STUDYPAL<span className="text-blue-600">WRITERS</span>
+                            STUDYHELP<span className="text-blue-600">ASSIGNMENT</span>
                         </span>
                     </div>
 

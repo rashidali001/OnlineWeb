@@ -29,30 +29,11 @@ const ContactModal = ({ isOpen, onClose }) => {
                                         Get Started Now
                                     </h3>
                                     <p className="text-gray-600">
-                                        Choose your preferred way to connect with us
+                                        Connect with us directly via WhatsApp
                                     </p>
                                 </div>
 
                                 <div className="space-y-4">
-                                    {/* iMessage Button */}
-                                    <a 
-                                        href="sms:+14424074486&body=Hello, I need help with my assignment"
-                                        className="flex items-center justify-center w-full px-6 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors group"
-                                    >
-                                        <svg className="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
-                                        </svg>
-                                        <span className="font-semibold">Chat via iMessage</span>
-                                        <svg 
-                                            className="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" 
-                                            fill="none" 
-                                            stroke="currentColor" 
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </a>
-
                                     {/* WhatsApp Button */}
                                     <a 
                                         href="https://wa.me/14424074486"
@@ -87,4 +68,4 @@ const ContactModal = ({ isOpen, onClose }) => {
     );
 };
 
-export default ContactModal; 
+export default ContactModal;

@@ -100,7 +100,7 @@ const AllServices = ({ setModal }) => {
                     onClick={() => setModal(true)}
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group"
                   >
-                    Get Started
+                    Contact Us
                     <svg 
                       className="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" 
                       fill="none" 

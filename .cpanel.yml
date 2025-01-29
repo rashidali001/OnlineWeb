@@ -1,0 +1,5 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home7/studyhel/repositories/OnlineWeb
+    - /bin/cp -r * $DEPLOYPATH
+

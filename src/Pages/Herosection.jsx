@@ -75,7 +75,7 @@ const Herosection = ({ setModal }) => {
                             >
                                 <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
                                 <span className="relative flex items-center justify-center text-lg font-semibold">
-                                    Get Started Now
+                                    Contact Us Now
                                     <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>

@@ -34,7 +34,7 @@ const Homepage = () => {
             }`}>
                 <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
                     <div className="flex items-center space-x-3">
-                        <img src="/logo.svg" alt="StudyPal Writers" className="h-9 w-9" />
+                        <img src="/logo.svg" alt="StudyHelp Assignment" className="h-9 w-9" />
                         <span className="font-extrabold text-xl tracking-tight text-gray-800 hover:text-blue-600 transition-colors duration-300">
                             STUDYHELP<span className="text-blue-600">ASSIGNMENT</span>
                         </span>
@@ -100,7 +100,7 @@ const Homepage = () => {
                                     }}
                                     className="w-full text-center px-6 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300 font-semibold shadow-sm"
                                 >
-                                    Get Started
+                                    Contact Us
                                 </button>
                             </div>
                         </div>
@@ -109,12 +109,12 @@ const Homepage = () => {
             </nav>
 
             <div className="pt-20">
-                <Herosection/>
+                <Herosection setModal={setModal}/>
             </div>
             <div id="services">
                 <Services setModal={setModal}/>
             </div>                     
-            <AboutUs/>
+            <AboutUs setModal={setModal}/>
             <Reviews/>
             <Consultation setModal={setModal}/>
             <Socials/>

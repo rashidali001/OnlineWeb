@@ -26,7 +26,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                             <div className="bg-white px-8 pt-8 pb-12">
                                 <div className="text-center mb-8">
                                     <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                                        Get Started Now
+                                        Contact Us Now
                                     </h3>
                                     <p className="text-gray-600">
                                         Connect with us directly via WhatsApp

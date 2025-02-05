@@ -100,11 +100,11 @@ const Socials = () => {
                             <div className="flex items-center space-x-2">
                                 <img src="/logo.svg" alt="StudyPal Writers" className="h-8 w-8" />
                                 <span className="text-white font-bold text-xl">
-                                    STUDYPAL<span className="text-blue-400">WRITERS</span>
+                                    STUDYHELP<span className="text-blue-400">ASSIGNMENT</span>
                                 </span>
                             </div>
                             <p className="text-gray-400 text-sm">
-                                © {new Date().getFullYear()} STUDYPALWRITERS. All rights reserved.
+                                © {new Date().getFullYear()} STUDYHELPASSIGNMENT. All rights reserved.
                             </p>
                         </div>
                     </div>
